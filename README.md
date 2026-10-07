@@ -8,4 +8,4 @@ This repository contains the solutions for Project 1, focusing on foundational C
 - **Question 3:** C Program for Delivery Distance Analysis (Includes array processing, reusable functions, and recursion).
 - **Question 4:** Arduino-based Smart Parking System (Tinkercad simulation code and report).
 
-All documentation and technical explanations are included in markdown files within their respective question folders.
+All documentation and technical explanations have been compiled into a single master document: `Assignment_Submission_Doc.md` in the root directory.

@@ -1,8 +1,8 @@
 // Pins matching Tinkercad wiring
-const int pingPin = 7;   // Purple wire
-const int buzzerPin = 6; // Light Blue wire
-const int greenLED = 5;  // Orange wire
-const int redLED = 4;    // Yellow wire
+const int pingPin = 9;   // Purple wire
+const int buzzerPin = 4; // Light Blue wire
+const int greenLED = 3;  // Orange wire
+const int redLED = 2;    // Yellow wire
 
 const int thresholdDistance = 50; // cm
 

@@ -140,7 +140,7 @@ Recursive sum: 140 km
 ### 2. Block Diagram
 ```mermaid
 flowchart LR
-    A[Ultrasonic Sensor\nParallax PING] -->|Echo Duration| B(Arduino Uno\nPin 7)
+    A[Ultrasonic Sensor\nParallax PING] -->|Echo Duration| B(Arduino Uno\nPin 9)
     B -->|Calculate Distance\nThreshold Logic| C{Distance <= 50cm?}
     C -->|Yes| D[Red LED ON\nGreen LED OFF\nBuzzer ON]
     C -->|No| E[Green LED ON\nRed LED OFF\nBuzzer OFF]
@@ -149,10 +149,10 @@ flowchart LR
 ### 3. Arduino Source Code
 ```cpp
 // Pins matching Tinkercad wiring
-const int pingPin = 7;   // Purple wire
-const int buzzerPin = 6; // Light Blue wire
-const int greenLED = 5;  // Orange wire
-const int redLED = 4;    // Yellow wire
+const int pingPin = 9;   // Purple wire
+const int buzzerPin = 4; // Light Blue wire
+const int greenLED = 3;  // Orange wire
+const int redLED = 2;    // Yellow wire
 
 const int thresholdDistance = 50; // cm
 
@@ -200,7 +200,7 @@ void loop() {
 ### 4. Technical Explanation
 - **Role of Components:** The Parallax PING))) sensor uses sound waves to measure distance. The Arduino Uno is the microcontroller that processes this data against thresholds. The LEDs and Buzzer act as visual and audio output actuators.
 - **Processing Data:** The Arduino sends a 5-microsecond pulse to trigger the sensor, then reads the return echo duration using `pulseIn()`. This duration is converted to centimeters by dividing by 29.1 and then dividing by 2 (for the round trip).
-- **Controlling Outputs:** It compares the calculated distance to a hardcoded threshold (50cm). If the distance is under or equal to 50cm, the Arduino writes a `HIGH` signal to Pins 4 and 6 (Red LED & Buzzer) and `LOW` to Pin 5 (Green LED).
+- **Controlling Outputs:** It compares the calculated distance to a hardcoded threshold (50cm). If the distance is under or equal to 50cm, the Arduino writes a `HIGH` signal to Pins 2 and 4 (Red LED & Buzzer) and `LOW` to Pin 3 (Green LED).
 
 ### 5. Simulation Test Cases
 **Test Case 1: Vehicle outside threshold (e.g., 100 cm)**
